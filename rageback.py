@@ -22,7 +22,7 @@ ADMIN_CHAT_ID = 6005239475   # أول شخص يعمل /start يصبح الأدم
 CHANNEL_ID = "@RAGEBACKESPORT"
 MAX_TEAMS = 23   # = عدد الفرق (من slot 3 إلى 25)
 
-DATA_FILE = "bot_data.json"
+DATA_FILE = "bot_scrim.json"
 
 # ==============================
 # ذاكرة
