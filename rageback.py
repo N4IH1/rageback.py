@@ -22,7 +22,7 @@ ADMIN_CHAT_ID = 6005239475   # أول شخص يعمل /start يصبح الأدم
 CHANNEL_ID = "@RAGEBACKESPORT"
 MAX_TEAMS = 23   # = عدد الفرق (من slot 3 إلى 25)
 
-DATA_FILE = "bot_scrim.json"
+DATA_FILE = "bot_data.json"
 
 # ==============================
 # ذاكرة
@@ -236,9 +236,10 @@ async def admin_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             save_all()
             await context.bot.send_message(
                 chat_id=user_id,
-                text=(f"✅ تم قبول فريقك من قبل الإدارة!\n\n"
-                      f"⏰ الموعد: *{ROOM_TIME}*\n"
-                      f"🎟 الكود: `{ROOM_CODE}`"),
+                 text=( f"✅ تم قبول فريقك من قبل الإدارة!\n\n"
+                        f"⏰ الموعد: *{ROOM_TIME}*\n"
+                        f"🎟 الكود: `{ROOM_CODE}`\n\n"
+                        f"📢 نزول الأيدي هنا: {CHANNEL_ID}"),
                 parse_mode="Markdown"
             )
         await q.edit_message_text("✅ تم قبول الفريق.", reply_markup=kb_admin_home())
